@@ -1,0 +1,6 @@
+emailid,password,acctno,username,gender,dateofbirth,acctbalance,address,dummy
+email01@test.com,p1,63200001,Mike,male,1/1/2001,2000,chennai,0
+email02@test.com,p2,63200002,Sofia,female,1/1/2002,1000,erode,0
+email03@test.com,p3,63200003,wbrother,male,15/4/1990,600,chennai,0
+email04@test.com,p4,63200004,wanda,female,1/1/2002,1000,chennai,0
+email05@test.com,p5,63200005,,,,0,,0

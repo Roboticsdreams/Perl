@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Central Bank</title>
+		<link href="http://localhost/centralbank/assets/css/index.css" rel="stylesheet" type="text/css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+		<script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Open Sans Condensed:300,700","Libre Baskerville:regular,700"]  }});</script>
+		<link rel="icon" href="http://localhost/centralbank/assets/images/logo.png">
+	</head>
+	<body>
+		<main class="main-container">
+			<div class="main-content">
+				<header class="header">
+					<form method="post" id="frmlogo" action="index.pl">
+						<input type="hidden" name="FORMNAME" value="index">
+						<input type="hidden" name="SUBMITBUTTON" value="index">
+						<a href="#" class="logo" onclick="document.getElementById('frmlogo').submit();">Central Bank</a>
+					</form>
+					<form method="post" id="frmlogin" action="index.pl">
+						<input type="hidden" name="FORMNAME" value="index">
+						<input type="hidden" name="SUBMITBUTTON" value="signin">
+						<a href="#" class="main-button" onclick="document.getElementById('frmlogin').submit();">Login</a>
+					</form>
+				</header>
+				<div class="banner" align="center">
+					<table class="registration-table">
+						<tr>
+							<form action="index.pl" method="post" class="registration-form-wrapper" id="frmregister" name="frmregister">
+								<input type="hidden" name="FORMNAME" value="registration">
+								<input type="hidden" name="SUBMITBUTTON" value="register">
+						</tr>		
+						<tr>
+							<td colspan="2" style="text-align:center">
+								<h2>Registration</h2>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center">
+								<TMPL_VAR NAME=ERROR>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center">
+								<p>Please fill in this form to create an account.</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:right">
+								<label for="email"><b>Email:</b></label>
+							</td>
+							<td>
+								&nbsp;&nbsp;<input type="text" placeholder="Enter Email" name="emailid" id="emailid" required>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:right">
+								<label for="psw"><b>Password:</b></label>
+							</td>
+							<td>
+								&nbsp;&nbsp;<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:right">
+								<label for="psw-repeat"><b>Repeat Password:</b></label>
+							</td>
+							<td>
+								&nbsp;&nbsp;<input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center">
+								<p>By creating an account you agree to our <a href="#" id="myBtn"><small>Terms & Privacy</small></a>.</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center">
+								<a href="#" class="main-button" onclick="validateForm();">Register</a>
+								</form>
+								<a href="#" class="main-button" onclick="document.getElementById('frmlogo').submit();">Cancel</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center">
+								<form method="post" id="frmsignin" action="index.pl">
+									<input type="hidden" name="FORMNAME" value="index">
+									<input type="hidden" name="SUBMITBUTTON" value="signin">
+									<p>Already have an account? <a href="#" onclick="document.getElementById('frmsignin').submit();"><small>Sign in</small></a></p>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>Please read these terms and conditions of use carefully before accessing, using any of our products or services.</p>
+					<ul>
+<li>These Terms and Conditions form a contract between the Applicant/Customer and Central Bank. The Applicant/Customer shall apply to Central Bank in the prescribed AOF for opening and operation of the Account and availing of the related Services.</li><li>
+By applying for opening the Account, the Applicant/Customer acknowledges and agrees that he /she/they has/have read, understood and accepted these Terms and Conditions and other specific terms and conditions as pertaining to the Account variant opted by the Customer, and other products and services availed by the Customer.</li><li>
+No act, delay or omission by the Bank shall affect its rights, powers and remedies under these Terms and Conditions and other terms on its Website.</li></ul>
+				</div>
+			</div>
+		</main>
+		<script>
+			var modal = document.getElementById("myModal");
+			var btn = document.getElementById("myBtn");
+			var span = document.getElementsByClassName("close")[0];
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			function validateForm(){
+				var password1 = document.getElementById("psw").value;
+				var password2 = document.getElementById("psw-repeat").value;
+
+				if (ValidateEmail()) {
+					if (password1 == '')  {
+						alert("Please Enter password");
+						return false;
+					}
+					else if (password2 == '') {
+						alert("Please Enter repeat password");
+						return false;
+					}
+					else if (password1 != password2 ) {
+						alert("Password mismatch");
+						return false;
+					}
+					else {
+						document.getElementById('frmregister').submit();
+					}
+				}
+			}
+			function ValidateEmail(){
+				var inputText = document.frmregister.emailid;
+				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				if(inputText.value.match(mailformat))
+				{
+					return true;
+				}
+				else
+				{
+					alert("Please enter valid email address!");
+					document.frmregister.emailid.focus();
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

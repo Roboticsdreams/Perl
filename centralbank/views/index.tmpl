@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Central Bank</title>
+		<link href="http://localhost/centralbank/assets/css/index.css" rel="stylesheet" type="text/css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+		<script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Open Sans Condensed:300,700","Libre Baskerville:regular,700"]  }});</script>
+		<link rel="icon" href="http://localhost/centralbank/assets/images/logo.png">
+	</head>
+	<body onload="myalert()">
+		<main class="main-container">
+			<div class="main-content">
+				<header class="header">
+					<form method="post" id="frmlogo" action="index.pl">
+						<input type="hidden" name="FORMNAME" value="index">
+						<input type="hidden" name="SUBMITBUTTON" value="index">
+						<a href="#" class="logo" onclick="document.getElementById('frmlogo').submit();">Central Bank</a>
+					</form>
+					<form method="post" id="frmregister" action="index.pl">
+						<input type="hidden" name="FORMNAME" value="index">
+						<input type="hidden" name="SUBMITBUTTON" value="signup">
+						<a href="#" class="main-button" onclick="document.getElementById('frmregister').submit();">Register</a>
+					</form>
+				</header>
+				<div class="banner">
+					<div class="banner-text">
+						<h1>Work with your <br/>money</h1>
+						<p>Central Bank is the fastest and safest way to plan, save and investment your money with impressive interest rates.</p>
+						<div class="button-holder">
+							<form method="post" id="frmsignup" action="index.pl">
+								<input type="hidden" name="FORMNAME" value="index">
+								<input type="hidden" name="SUBMITBUTTON" value="signup">
+								<a href="#" class="main-button"onclick="document.getElementById('frmsignup').submit();">Sign up</a>
+							</form>
+							<form method="post" id="frmsignin" action="index.pl">
+								<input type="hidden" name="FORMNAME" value="index">
+								<input type="hidden" name="SUBMITBUTTON" value="signin">
+								<a href="#" class="main-button"onclick="document.getElementById('frmsignin').submit();">Sign in</a>
+							</form>
+						</div>
+					</div>
+					<div data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/5db7204fc0d9b4c785103c1b/5dca884232619b68b6517e41_animation%201.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="60" data-duration="0" class="banner-animated-image"></div>
+				</div>
+			</div>
+		</main>
+		<script src="http://localhost/centralbank/assets/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+		<script src="http://localhost/centralbank/assets/js/webflow.js" type="text/javascript"></script>
+		<script>
+			function myalert() {
+				<TMPL_VAR NAME=ALERT>
+			}
+		</script>
+	</body>
+</html>
