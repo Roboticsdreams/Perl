@@ -18,21 +18,21 @@ Perl Workouts
 
 ## Sample Folder structure
 - PortableApps
-   - xammp
-	- htdocs
-		- centralbank
-			- css
-			- images
-			- js
-	 - cgi-bin
-		- centralbank
-			- controller
-			- model
-			- utils
-			- views
-			- index.pl
-			- customer.csv
-			- transaction.csv
+	- xammp
+		- htdocs
+			- centralbank
+				- css
+				- images
+				- js
+		- cgi-bin
+			- centralbank
+				- controller
+				- model
+				- utils
+				- views
+				- index.pl
+				- customer.csv
+				- transaction.csv
 
 ## Screenshots
 <p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/index.jpg"/> </p>
