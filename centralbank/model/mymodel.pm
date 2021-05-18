@@ -290,7 +290,7 @@ sub depositAmt {
 		my $ctdate = $dt->ymd;
 		my $cttime = $dt->hms; 
 		my $datetime = $ctdate." ".$cttime;
-		my $data = $datetime.",credit,self,".$acctno.",".$currentbalance.",".$depositamt.",".$totalbalance.",0\n";
+		my $data = "'".$datetime."',credit,self,".$acctno.",".$currentbalance.",".$depositamt.",".$totalbalance.",0\n";
 		write2CSV('transaction.csv',$data);
 		my $json = {ACCTNO => $acctno, NEWBALANCE => $totalbalance };
 		updateBalanceCSV($json);
@@ -364,7 +364,7 @@ sub withdrawAmt {
 		my $ctdate = $dt->ymd;
 		my $cttime = $dt->hms; 
 		my $datetime = $ctdate." ".$cttime;
-		my $data = $datetime.",debit,self,".$acctno.",".$currentbalance.",".$withdrawamt.",".$totalbalance.",0\n";
+		my $data = "'".$datetime."',debit,self,".$acctno.",".$currentbalance.",".$withdrawamt.",".$totalbalance.",0\n";
 		write2CSV('transaction.csv',$data);
 		my $json = {ACCTNO => $acctno, NEWBALANCE => $totalbalance };
 		updateBalanceCSV($json);
