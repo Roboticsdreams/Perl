@@ -4,7 +4,7 @@ Perl Workouts
 ## Steps to download and execute this project
 
 - Download and Install or use [Portable XAMMP Server](https://portableapps.com/redirect/?a=XAMPP&s=s&d=pa&f=XAMPP_1.7.paf.exe)
-- Set Environment variable for perl C:\PortableApps\Perl\perl\bin
+- Set Environment variable for perl C:\PortableApps\xampp\perl\bin
 - Download the [Perl centralbank project code](https://github.com/Roboticsdreams/Perl/archive/refs/heads/master.zip)
 - Unzip the zip file.
 - Go to centralbank/views and copy the assets folder
