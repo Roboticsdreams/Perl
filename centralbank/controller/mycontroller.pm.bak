@@ -28,7 +28,7 @@ sub run_controller {
 			my $password = param('psw');
 			my $user = checkvalidUser($emailid, $password);
 			if ($user) {
-				my $myargs = { ACCTNO => $user->{acctno}, METHOD => $submitbutton };
+				my $myargs = { USER => $user, METHOD => $submitbutton };
 				my $dboard = getDashboardData($myargs);
 				foreach my $key (keys %$dboard) {
 					$params{$key} = $dboard->{$key};

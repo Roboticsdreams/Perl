@@ -84,6 +84,9 @@ sub getDashboardData {
 	$method = $args->{METHOD};
 	$user = getUser($acctno);
 
+	warn Dumper($acctno);
+	warn Dumper($method);
+
 	if ($method eq 'deposit') {
 		$resulttable = getDepositform($acctno);
 		$header = 'Money Deposit';
