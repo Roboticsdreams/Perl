@@ -35,12 +35,12 @@ Perl Workouts
 				- transaction.csv
 
 ## Screenshots
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/index.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/registration.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/login.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/userprofile.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/accountsummary.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/deposit.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/withdraw.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/transfer.jpg"/> </p>
-<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/centralbank/screenshots/transaction.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/index.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/registration.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/login.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/userprofile.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/accountsummary.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/deposit.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/withdraw.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/transfer.jpg"/> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/Roboticsdreams/Perl/master/screenshots/transaction.jpg"/> </p>
